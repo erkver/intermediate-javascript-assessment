@@ -13,7 +13,10 @@
 // return the result of your updateAnimal invocation
 
 // CODE HERE...
-
+function callBinding(magicAnimals, updateAnimal, id) {
+  magicAnimals.filter(animal => animal.id === id);
+  return updateAnimal('Trogdor');
+}
 
 
 // *************
@@ -28,7 +31,10 @@
 // return the result of your updateAnimal invocation
 
 // CODE HERE...
-
+function applyBinding(magicAnimals, updateAnimal, id) {
+  magicAnimals.filter(animal => animal.id === id);
+  return updateAnimal(["being majestic", "eating rainbows"]);
+}
 
 
 // *************
@@ -48,7 +54,13 @@
 var foo;
 
 // CODE HERE...
-
+function promiseMe(promise) {
+  new Promise(function(resolve, reject) {
+    setTimeout(() => {
+      resolve(foo = 'bar')
+    }, 20000);
+  })
+}
 
 
 // *************
